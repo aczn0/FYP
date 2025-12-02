@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://da7k64bbs01hb"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_xjl35"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjl35")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 651.0
+offset_bottom = 704.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -78.0
+offset_right = 115.5
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TrainQ" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Train Q Learning Agent"
+
+[node name="PlayQ" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Play Q Learning Agent"
+
+[node name="TrainSARSA" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Train SARSA agent"
+
+[node name="PlaySARSA" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Play SARSA agent"
+
+[connection signal="pressed" from="VBoxContainer/TrainQ" to="." method="_on_train_q_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlayQ" to="." method="_on_play_q_pressed"]
+[connection signal="pressed" from="VBoxContainer/TrainSARSA" to="." method="_on_train_sarsa_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlaySARSA" to="." method="_on_play_sarsa_pressed"]
