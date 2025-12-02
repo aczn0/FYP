@@ -2,6 +2,8 @@
 
 This repository contains the code for my Final Year Project: Playing Tetris Optimally with Artificial Intelligence.
 
+The project in this repository is broken due to improper importing of the files - thus this repository is for archival purposes only.
+
 ## Running the program
 To run the program you must have at least .NET 8.
 
@@ -19,3 +21,4 @@ To navigate to the other agent, you must close and re-enter the program then sel
 The Final report is located in the documents folder.
 
 The demonstration video is located under the demonstration folder in the report.
+
